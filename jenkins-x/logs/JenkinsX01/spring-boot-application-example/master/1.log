@@ -1,0 +1,388 @@
+
+Showing logs for build [32mjenkinsx01-spring-boot-applicat-8lmrv-1[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1615618482.8574479,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mjenkinsx01-spring-boot-applicat-8lmrv-1[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mjenkinsx01-spring-boot-applicat-8lmrv-1[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mjenkinsx01-spring-boot-applicat-8lmrv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jenkinsx01-spring-boot-applicat-8lmrv-t47vv[0m
+{"level":"info","ts":1615618490.8687317,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/JenkinsX01/spring-boot-application-example.git @ v0.0.1 in path /workspace/source"}
+{"level":"warn","ts":1615618490.868865,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1615618490.9177299,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mjenkinsx01-spring-boot-applicat-8lmrv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mjenkinsx01-spring-boot-applicat-8lmrv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mjenkinsx01-spring-boot-applicat-8lmrv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mjenkinsx01-spring-boot-applicat-8lmrv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-mvn-deploy[0m
+Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
+OpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.myapp:myapp_server >-----------------------
+[INFO] Building Spring boot application example 0.0.1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ myapp_server ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ myapp_server ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ myapp_server ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 26 source files to /workspace/source/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ myapp_server ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /workspace/source/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ myapp_server ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to /workspace/source/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M1:test (default-test) @ myapp_server ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.myapp.DriverControllerTest
+06:55:17.477 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.myapp.DriverControllerTest]
+06:55:17.491 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+06:55:17.510 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+06:55:17.666 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.myapp.DriverControllerTest] from class [org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper]
+06:55:17.700 [main] INFO org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.myapp.DriverControllerTest], using SpringBootContextLoader
+06:55:17.710 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.myapp.DriverControllerTest]: class path resource [com/myapp/DriverControllerTest-context.xml] does not exist
+06:55:17.710 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.myapp.DriverControllerTest]: class path resource [com/myapp/DriverControllerTestContext.groovy] does not exist
+06:55:17.711 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.myapp.DriverControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+06:55:17.712 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.myapp.DriverControllerTest]: DriverControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+06:55:17.880 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.myapp.DriverControllerTest]
+06:55:17.903 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+06:55:17.904 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+06:55:17.904 [main] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+06:55:17.915 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved classpath location [com/myapp/] to resources [URL [file:/workspace/source/target/test-classes/com/myapp/], URL [file:/workspace/source/target/classes/com/myapp/]]
+06:55:17.916 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [/workspace/source/target/test-classes/com/myapp]
+06:55:17.963 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [/workspace/source/target/test-classes/com/myapp] for files matching pattern [/workspace/source/target/test-classes/com/myapp/*.class]
+06:55:17.970 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [/workspace/source/target/classes/com/myapp]
+06:55:17.970 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [/workspace/source/target/classes/com/myapp] for files matching pattern [/workspace/source/target/classes/com/myapp/*.class]
+06:55:17.975 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:com/myapp/*.class] to resources [file [/workspace/source/target/test-classes/com/myapp/CarControllerTest.class], file [/workspace/source/target/test-classes/com/myapp/DriverControllerTest.class], file [/workspace/source/target/test-classes/com/myapp/MyappServerTests.class], file [/workspace/source/target/classes/com/myapp/MyappServer.class]]
+06:55:18.100 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/workspace/source/target/classes/com/myapp/MyappServer.class]
+06:55:18.102 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.myapp.MyappServer for test class com.myapp.DriverControllerTest
+06:55:18.117 [main] DEBUG org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - @TestExecutionListeners is not present for class [com.myapp.DriverControllerTest]: using defaults.
+06:55:18.120 [main] INFO org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+06:55:18.207 [main] INFO org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7f1302d6, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@43ee72e6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@23529fee, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4fe767f3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2805c96b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@184cf7cf, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2fd6b6c7, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5bfa9431, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5db250b4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@223f3642, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@38c5cc4c, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@37918c79]
+06:55:18.210 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.myapp.DriverControllerTest]
+06:55:18.210 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.myapp.DriverControllerTest]
+06:55:18.216 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.myapp.DriverControllerTest]
+06:55:18.216 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.myapp.DriverControllerTest]
+06:55:18.268 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.myapp.DriverControllerTest]
+06:55:18.268 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.myapp.DriverControllerTest]
+06:55:18.273 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@27ae2fd0 testClass = DriverControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@29176cc1 testClass = DriverControllerTest, locations = '{}', classes = '{class com.myapp.MyappServer}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.ImportsContextCustomizer@52e8b588, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@646007f4, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@f000bdf6, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@5a4041cc, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@528931cf, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@f493996a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@1d7acb34], resourceBasePath = '', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null].
+06:55:18.278 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.myapp.DriverControllerTest]
+06:55:18.278 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.myapp.DriverControllerTest]
+06:55:18.288 [main] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@27ae2fd0 testClass = DriverControllerTest, testInstance = com.myapp.DriverControllerTest@2ddc8ecb, testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@29176cc1 testClass = DriverControllerTest, locations = '{}', classes = '{class com.myapp.MyappServer}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.ImportsContextCustomizer@52e8b588, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@646007f4, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@f000bdf6, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@5a4041cc, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@528931cf, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@f493996a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@1d7acb34], resourceBasePath = '', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]]].
+06:55:18.410 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+06:55:18.410 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+06:55:18.463 [main] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+06:55:18.468 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true, server.port=-1}
+06:55:18.469 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [Inlined Test Properties] PropertySource with highest search precedence
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.4.3.RELEASE)
+
+2021-03-13 06:55:19.511  INFO 67 --- [           main] com.myapp.DriverControllerTest           : Starting DriverControllerTest on jenkinsx01-spring-boot-applicat-8lmrv-1-from-build-pack-2-qwwsc with PID 67 (started by root in /workspace/source)
+2021-03-13 06:55:19.563  INFO 67 --- [           main] com.myapp.DriverControllerTest           : No active profile set, falling back to default profiles: default
+2021-03-13 06:55:19.864  INFO 67 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@7d322cad: startup date [Sat Mar 13 06:55:19 UTC 2021]; root of context hierarchy
+2021-03-13 06:55:25.301  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/drivers],methods=[POST]}" onto public com.myapp.datatransferobject.DriverDTO com.myapp.controller.DriverController.createDriver(com.myapp.datatransferobject.DriverDTO) throws com.myapp.exception.ConstraintsViolationException
+2021-03-13 06:55:25.303  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/drivers/{driverId}/car/{licensePlate}],methods=[PUT]}" onto public void com.myapp.controller.DriverController.selectCar(long,java.lang.String) throws com.myapp.exception.ConstraintsViolationException,com.myapp.exception.EntityNotFoundException,com.myapp.exception.CarAlreadyInUseException
+2021-03-13 06:55:25.304  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/drivers/{driverId}/car/{licensePlate}],methods=[DELETE]}" onto public void com.myapp.controller.DriverController.deselectCar(long,java.lang.String) throws com.myapp.exception.ConstraintsViolationException,com.myapp.exception.EntityNotFoundException,com.myapp.exception.CarAlreadyInUseException
+2021-03-13 06:55:25.306  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/drivers/{driverId}],methods=[DELETE]}" onto public void com.myapp.controller.DriverController.deleteDriver(long) throws com.myapp.exception.EntityNotFoundException
+2021-03-13 06:55:25.307  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/drivers/{driverId}],methods=[PUT]}" onto public void com.myapp.controller.DriverController.updateLocation(long,double,double) throws com.myapp.exception.ConstraintsViolationException,com.myapp.exception.EntityNotFoundException
+2021-03-13 06:55:25.308  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/drivers],methods=[GET]}" onto public java.util.List<com.myapp.datatransferobject.DriverDTO> com.myapp.controller.DriverController.findDrivers(com.myapp.domainvalue.OnlineStatus,java.lang.String,java.lang.Boolean) throws com.myapp.exception.ConstraintsViolationException,com.myapp.exception.EntityNotFoundException
+2021-03-13 06:55:25.309  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/drivers/{driverId}],methods=[GET]}" onto public com.myapp.datatransferobject.DriverDTO com.myapp.controller.DriverController.getDriver(long) throws com.myapp.exception.EntityNotFoundException
+2021-03-13 06:55:25.317  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2021-03-13 06:55:25.320  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2021-03-13 06:55:25.367  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2021-03-13 06:55:25.368  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2021-03-13 06:55:25.966  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@7d322cad: startup date [Sat Mar 13 06:55:19 UTC 2021]; root of context hierarchy
+2021-03-13 06:55:26.106  INFO 67 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-13 06:55:26.107  INFO 67 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-13 06:55:26.199  INFO 67 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-13 06:55:26.664  INFO 67 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2021-03-13 06:55:26.665  INFO 67 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2021-03-13 06:55:26.677  INFO 67 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 12 ms
+2021-03-13 06:55:26.802  INFO 67 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-03-13 06:55:26.834  INFO 67 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-03-13 06:55:26.871  INFO 67 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-13 06:55:27.374  INFO 67 --- [           main] com.myapp.DriverControllerTest           : Started DriverControllerTest in 8.887 seconds (JVM running for 11.679)
+2021-03-13 06:55:27.500  INFO 67 --- [           main] com.myapp.util.LoggingInterceptor        : method: PUT	uri: /v1/drivers/1/car/5432PW	status: 200	remoteAddress: 127.0.0.1	
+2021-03-13 06:55:27.610  INFO 67 --- [           main] com.myapp.util.LoggingInterceptor        : method: GET	uri: /v1/drivers	status: 200	remoteAddress: 127.0.0.1	
+org.springframework.mock.web.MockHttpServletResponse@334ebcaa
+2021-03-13 06:55:27.686  INFO 67 --- [           main] com.myapp.util.LoggingInterceptor        : method: GET	uri: /v1/drivers/1	status: 200	remoteAddress: 127.0.0.1	
+org.springframework.mock.web.MockHttpServletResponse@4f3faa70
+2021-03-13 06:55:27.694  INFO 67 --- [           main] com.myapp.util.LoggingInterceptor        : method: DELETE	uri: /v1/drivers/1/car/5432PW	status: 200	remoteAddress: 127.0.0.1	
+2021-03-13 06:55:27.702  INFO 67 --- [           main] com.myapp.util.LoggingInterceptor        : method: GET	uri: /v1/drivers	status: 200	remoteAddress: 127.0.0.1	
+org.springframework.mock.web.MockHttpServletResponse@11e355ca
+2021-03-13 06:55:27.715  INFO 67 --- [           main] com.myapp.util.LoggingInterceptor        : method: PUT	uri: /v1/drivers/1/car/5432PW	status: 400	remoteAddress: 127.0.0.1	
+2021-03-13 06:55:28.132  INFO 67 --- [           main] com.myapp.util.LoggingInterceptor        : method: POST	uri: /v1/drivers	status: 201	remoteAddress: 127.0.0.1	
+2021-03-13 06:55:28.139  INFO 67 --- [           main] com.myapp.util.LoggingInterceptor        : method: GET	uri: /v1/drivers	status: 200	remoteAddress: 127.0.0.1	
+org.springframework.mock.web.MockHttpServletResponse@28757abd
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.344 s - in com.myapp.DriverControllerTest
+[INFO] Running com.myapp.CarControllerTest
+2021-03-13 06:55:28.166  INFO 67 --- [           main] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.myapp.CarControllerTest], using SpringBootContextLoader
+2021-03-13 06:55:28.168  INFO 67 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.myapp.CarControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-03-13 06:55:28.169  INFO 67 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.myapp.CarControllerTest]: CarControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-03-13 06:55:28.195  INFO 67 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.myapp.MyappServer for test class com.myapp.CarControllerTest
+2021-03-13 06:55:28.203  INFO 67 --- [           main] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2021-03-13 06:55:28.208  INFO 67 --- [           main] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3e906375, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@40230eb9, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5b7aa898, org.springframework.test.context.support.DirtiesContextTestExecutionListener@41b13f3d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7c0777b5, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2489e84a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2a39aa2b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@62b93086, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@254449bb, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4e642ee1, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@29ebbdf4, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2fd954f]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.4.3.RELEASE)
+
+2021-03-13 06:55:28.472  INFO 67 --- [           main] com.myapp.CarControllerTest              : Starting CarControllerTest on jenkinsx01-spring-boot-applicat-8lmrv-1-from-build-pack-2-qwwsc with PID 67 (started by root in /workspace/source)
+2021-03-13 06:55:28.482  INFO 67 --- [           main] com.myapp.CarControllerTest              : No active profile set, falling back to default profiles: default
+2021-03-13 06:55:28.488  INFO 67 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1e95b653: startup date [Sat Mar 13 06:55:28 UTC 2021]; root of context hierarchy
+2021-03-13 06:55:30.388  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/cars/{licensePlate}],methods=[DELETE]}" onto public void com.myapp.controller.CarController.deleteCar(java.lang.String) throws com.myapp.exception.EntityNotFoundException,com.myapp.exception.ConstraintsViolationException
+2021-03-13 06:55:30.389  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/cars],methods=[GET]}" onto public java.util.List<com.myapp.datatransferobject.CarDTO> com.myapp.controller.CarController.findCars() throws com.myapp.exception.ConstraintsViolationException,com.myapp.exception.EntityNotFoundException
+2021-03-13 06:55:30.389  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/cars],methods=[POST]}" onto public com.myapp.datatransferobject.CarDTO com.myapp.controller.CarController.createCar(com.myapp.datatransferobject.CarDTO) throws com.myapp.exception.ConstraintsViolationException
+2021-03-13 06:55:30.390  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/cars/{licensePlate}],methods=[GET]}" onto public com.myapp.datatransferobject.CarDTO com.myapp.controller.CarController.getCar(java.lang.String) throws com.myapp.exception.EntityNotFoundException
+2021-03-13 06:55:30.390  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2021-03-13 06:55:30.392  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2021-03-13 06:55:30.392  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2021-03-13 06:55:30.392  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2021-03-13 06:55:30.590  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@1e95b653: startup date [Sat Mar 13 06:55:28 UTC 2021]; root of context hierarchy
+2021-03-13 06:55:30.665  INFO 67 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-13 06:55:30.665  INFO 67 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-13 06:55:30.703  INFO 67 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-13 06:55:30.868  INFO 67 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2021-03-13 06:55:30.870  INFO 67 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2021-03-13 06:55:30.879  INFO 67 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 9 ms
+2021-03-13 06:55:31.046  INFO 67 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-03-13 06:55:31.046  INFO 67 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-03-13 06:55:31.047  INFO 67 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-13 06:55:31.110  INFO 67 --- [           main] com.myapp.CarControllerTest              : Started CarControllerTest in 2.838 seconds (JVM running for 15.415)
+2021-03-13 06:55:31.182  INFO 67 --- [           main] com.myapp.util.LoggingInterceptor        : method: GET	uri: /v1/cars/546PW	status: 200	remoteAddress: 127.0.0.1	
+org.springframework.mock.web.MockHttpServletResponse@70b2fa10
+2021-03-13 06:55:31.209  INFO 67 --- [           main] com.myapp.util.LoggingInterceptor        : method: POST	uri: /v1/cars	status: 201	remoteAddress: 127.0.0.1	
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.988 s - in com.myapp.CarControllerTest
+[INFO] Running com.myapp.MyappServerTests
+2021-03-13 06:55:31.265  INFO 67 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.myapp.MyappServerTests], using SpringBootContextLoader
+2021-03-13 06:55:31.265  INFO 67 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.myapp.MyappServerTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-03-13 06:55:31.271  INFO 67 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2021-03-13 06:55:31.272  INFO 67 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@261b9a37, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@15d3793b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@55e1192, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1213ffbc, org.springframework.test.context.transaction.TransactionalTestExecutionListener@68a305eb, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6637a365, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1310fcb0, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1ef31f71, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6e8fdd19, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@35787726, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2199e845, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@27976390]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.4.3.RELEASE)
+
+2021-03-13 06:55:31.467  INFO 67 --- [           main] com.myapp.MyappServerTests               : Starting MyappServerTests on jenkinsx01-spring-boot-applicat-8lmrv-1-from-build-pack-2-qwwsc with PID 67 (started by root in /workspace/source)
+2021-03-13 06:55:31.467  INFO 67 --- [           main] com.myapp.MyappServerTests               : No active profile set, falling back to default profiles: default
+2021-03-13 06:55:31.471  INFO 67 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@480cbe2e: startup date [Sat Mar 13 06:55:31 UTC 2021]; root of context hierarchy
+2021-03-13 06:55:33.883  INFO 67 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e751c732] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-13 06:55:34.488  INFO 67 --- [           main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2021-03-13 06:55:34.571  INFO 67 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-03-13 06:55:35.205  INFO 67 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.11.Final}
+2021-03-13 06:55:35.206  INFO 67 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-03-13 06:55:35.208  INFO 67 --- [           main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2021-03-13 06:55:35.323  INFO 67 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2021-03-13 06:55:35.882  INFO 67 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-03-13 06:55:36.907  INFO 67 --- [           main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+Hibernate: drop table car if exists
+Hibernate: drop table driver if exists
+Hibernate: create table car (car_id bigint generated by default as identity, convertible boolean, date_created timestamp not null, deleted boolean not null, engine_type varchar(255) not null, license_plate varchar(255) not null, manufacturer varchar(255) not null, rating integer, seat_count integer not null, primary key (car_id))
+Hibernate: create table driver (id bigint generated by default as identity, coordinate binary(255), date_coordinate_updated timestamp, date_created timestamp not null, deleted boolean not null, online_status varchar(255) not null, password varchar(255) not null, username varchar(255) not null, car_id bigint, primary key (id))
+Hibernate: alter table car add constraint uc_license_plate unique (license_plate)
+Hibernate: alter table driver add constraint uc_username unique (username)
+Hibernate: alter table driver add constraint FK8wacexawfwmswuet3651bhd28 foreign key (car_id) references car
+2021-03-13 06:55:36.994  INFO 67 --- [           main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2021-03-13 06:55:37.094  INFO 67 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-13 06:55:37.202  INFO 67 --- [           main] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from URL [file:/workspace/source/target/classes/data.sql]
+2021-03-13 06:55:37.272  INFO 67 --- [           main] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from URL [file:/workspace/source/target/classes/data.sql] in 70 ms.
+2021-03-13 06:55:39.305  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/cars/{licensePlate}],methods=[DELETE]}" onto public void com.myapp.controller.CarController.deleteCar(java.lang.String) throws com.myapp.exception.EntityNotFoundException,com.myapp.exception.ConstraintsViolationException
+2021-03-13 06:55:39.307  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/cars],methods=[GET]}" onto public java.util.List<com.myapp.datatransferobject.CarDTO> com.myapp.controller.CarController.findCars() throws com.myapp.exception.ConstraintsViolationException,com.myapp.exception.EntityNotFoundException
+2021-03-13 06:55:39.307  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/cars],methods=[POST]}" onto public com.myapp.datatransferobject.CarDTO com.myapp.controller.CarController.createCar(com.myapp.datatransferobject.CarDTO) throws com.myapp.exception.ConstraintsViolationException
+2021-03-13 06:55:39.307  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/cars/{licensePlate}],methods=[GET]}" onto public com.myapp.datatransferobject.CarDTO com.myapp.controller.CarController.getCar(java.lang.String) throws com.myapp.exception.EntityNotFoundException
+2021-03-13 06:55:39.310  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/drivers],methods=[POST]}" onto public com.myapp.datatransferobject.DriverDTO com.myapp.controller.DriverController.createDriver(com.myapp.datatransferobject.DriverDTO) throws com.myapp.exception.ConstraintsViolationException
+2021-03-13 06:55:39.310  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/drivers/{driverId}/car/{licensePlate}],methods=[PUT]}" onto public void com.myapp.controller.DriverController.selectCar(long,java.lang.String) throws com.myapp.exception.ConstraintsViolationException,com.myapp.exception.EntityNotFoundException,com.myapp.exception.CarAlreadyInUseException
+2021-03-13 06:55:39.312  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/drivers/{driverId}/car/{licensePlate}],methods=[DELETE]}" onto public void com.myapp.controller.DriverController.deselectCar(long,java.lang.String) throws com.myapp.exception.ConstraintsViolationException,com.myapp.exception.EntityNotFoundException,com.myapp.exception.CarAlreadyInUseException
+2021-03-13 06:55:39.312  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/drivers/{driverId}],methods=[DELETE]}" onto public void com.myapp.controller.DriverController.deleteDriver(long) throws com.myapp.exception.EntityNotFoundException
+2021-03-13 06:55:39.312  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/drivers/{driverId}],methods=[PUT]}" onto public void com.myapp.controller.DriverController.updateLocation(long,double,double) throws com.myapp.exception.ConstraintsViolationException,com.myapp.exception.EntityNotFoundException
+2021-03-13 06:55:39.312  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/drivers],methods=[GET]}" onto public java.util.List<com.myapp.datatransferobject.DriverDTO> com.myapp.controller.DriverController.findDrivers(com.myapp.domainvalue.OnlineStatus,java.lang.String,java.lang.Boolean) throws com.myapp.exception.ConstraintsViolationException,com.myapp.exception.EntityNotFoundException
+2021-03-13 06:55:39.315  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/drivers/{driverId}],methods=[GET]}" onto public com.myapp.datatransferobject.DriverDTO com.myapp.controller.DriverController.getDriver(long) throws com.myapp.exception.EntityNotFoundException
+2021-03-13 06:55:39.316  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.myapp.controller.HomeController.home()
+2021-03-13 06:55:39.316  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2021-03-13 06:55:39.364  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2021-03-13 06:55:39.364  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2021-03-13 06:55:39.365  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2021-03-13 06:55:39.372  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-03-13 06:55:39.373  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-03-13 06:55:40.005  INFO 67 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7db70494, org.springframework.security.web.context.SecurityContextPersistenceFilter@17873842, org.springframework.security.web.header.HeaderWriterFilter@17e66aed, org.springframework.security.web.authentication.logout.LogoutFilter@3b28ab9b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@68838767, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@293ba26c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3f030217, org.springframework.security.web.session.SessionManagementFilter@66acaa54, org.springframework.security.web.access.ExceptionTranslationFilter@47d4468a]
+2021-03-13 06:55:40.091  INFO 67 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/h2-console/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@40b958c5, org.springframework.security.web.context.SecurityContextPersistenceFilter@237bdbcb, org.springframework.security.web.header.HeaderWriterFilter@1443539, org.springframework.security.web.authentication.logout.LogoutFilter@3cf7433e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1e6e29d6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@16a15261, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@36ec4071, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d49fe37, org.springframework.security.web.session.SessionManagementFilter@5b160208, org.springframework.security.web.access.ExceptionTranslationFilter@673a5aa7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2686a801]
+2021-03-13 06:55:40.874  INFO 67 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@480cbe2e: startup date [Sat Mar 13 06:55:31 UTC 2021]; root of context hierarchy
+2021-03-13 06:55:40.967  INFO 67 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-13 06:55:40.973  INFO 67 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-13 06:55:41.014  INFO 67 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-13 06:55:41.666  INFO 67 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-03-13 06:55:41.671  INFO 67 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-03-13 06:55:41.674  INFO 67 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-13 06:55:41.782  INFO 67 --- [           main] com.myapp.MyappServerTests               : Started MyappServerTests in 10.498 seconds (JVM running for 26.087)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.101 s - in com.myapp.MyappServerTests
+2021-03-13 06:55:41.794  INFO 67 --- [       Thread-1] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@7d322cad: startup date [Sat Mar 13 06:55:19 UTC 2021]; root of context hierarchy
+2021-03-13 06:55:41.796  INFO 67 --- [       Thread-2] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@1e95b653: startup date [Sat Mar 13 06:55:28 UTC 2021]; root of context hierarchy
+2021-03-13 06:55:41.797  INFO 67 --- [       Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@480cbe2e: startup date [Sat Mar 13 06:55:31 UTC 2021]; root of context hierarchy
+2021-03-13 06:55:41.867  INFO 67 --- [       Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-03-13 06:55:41.877  INFO 67 --- [       Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+Hibernate: drop table car if exists
+Hibernate: drop table driver if exists
+2021-03-13 06:55:41.909  INFO 67 --- [       Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ myapp_server ---
+[INFO] Building jar: /workspace/source/target/myapp_server-0.0.1.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:1.4.3.RELEASE:repackage (default) @ myapp_server ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ myapp_server ---
+[INFO] Installing /workspace/source/target/myapp_server-0.0.1.jar to /home/jenkins/.mvnrepository/com/myapp/myapp_server/0.0.1/myapp_server-0.0.1.jar
+[INFO] Installing /workspace/source/pom.xml to /home/jenkins/.mvnrepository/com/myapp/myapp_server/0.0.1/myapp_server-0.0.1.pom
+[INFO] 
+[INFO] --- maven-deploy-plugin:2.8.2:deploy (default-deploy) @ myapp_server ---
+[INFO] Using alternate deployment repository local-nexus::default::http://nexus/repository/maven-releases/
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  53.722 s
+[INFO] Finished at: 2021-03-13T06:55:48Z
+[INFO] ------------------------------------------------------------------------
+
+Showing logs for build [32mjenkinsx01-spring-boot-applicat-8lmrv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-skaffold-version[0m
+v1.0.1
+
+Showing logs for build [32mjenkinsx01-spring-boot-applicat-8lmrv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0313 06:55:51.440267      10 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0000] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0000] Retrieving image manifest openjdk:8-jdk-slim 
+[36mINFO[0m[0000] Retrieving image manifest openjdk:8-jdk-slim 
+[36mINFO[0m[0001] Built cross stage deps: map[]                
+[36mINFO[0m[0001] Retrieving image manifest openjdk:8-jdk-slim 
+[36mINFO[0m[0001] Retrieving image manifest openjdk:8-jdk-slim 
+[36mINFO[0m[0001] Executing 0 build triggers                   
+[36mINFO[0m[0001] cmd: EXPOSE                                  
+[36mINFO[0m[0001] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0001] Resolving srcs [pom.xml target/lib*]...      
+[36mINFO[0m[0001] Checking for cached layer karriacr.azurecr.io/todo/cache:44523772ab42031046cd25eaf75acfa3f73f36ffbb81c105bf09533f10ad8d09... 
+[36mINFO[0m[0001] No cached layer found for cmd COPY pom.xml target/lib* /opt/lib/ 
+[36mINFO[0m[0001] Resolving srcs [target/*.jar]...             
+[36mINFO[0m[0001] Unpacking rootfs as cmd COPY pom.xml target/lib* /opt/lib/ requires it. 
+[36mINFO[0m[0008] ENV PORT 8080                                
+[36mINFO[0m[0008] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0008] ENV CLASSPATH /opt/lib                       
+[36mINFO[0m[0008] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0008] EXPOSE 8080                                  
+[36mINFO[0m[0008] cmd: EXPOSE                                  
+[36mINFO[0m[0008] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0008] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0008] Resolving srcs [pom.xml target/lib*]...      
+[36mINFO[0m[0008] COPY pom.xml target/lib* /opt/lib/           
+[36mINFO[0m[0008] Resolving srcs [pom.xml target/lib*]...      
+[36mINFO[0m[0008] Resolving 1 paths                            
+[36mINFO[0m[0008] Taking snapshot of files...                  
+[36mINFO[0m[0008] Pushing layer karriacr.azurecr.io/todo/cache:44523772ab42031046cd25eaf75acfa3f73f36ffbb81c105bf09533f10ad8d09 to cache now 
+[36mINFO[0m[0008] Resolving srcs [target/*.jar]...             
+[36mINFO[0m[0008] COPY target/*.jar /opt/app.jar               
+[36mINFO[0m[0008] Resolving srcs [target/*.jar]...             
+[36mINFO[0m[0008] Resolving 1 paths                            
+[36mINFO[0m[0008] Taking snapshot of files...                  
+[36mINFO[0m[0009] WORKDIR /opt                                 
+[36mINFO[0m[0009] cmd: workdir                                 
+[36mINFO[0m[0009] Changed working directory to /opt            
+[36mINFO[0m[0009] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0009] CMD ["java", "-XX:+UnlockExperimentalVMOptions", "-XX:+UseCGroupMemoryLimitForHeap", "-jar", "app.jar"] 
+[36mINFO[0m[0009] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0009] Pushing layer karriacr.azurecr.io/todo/cache:b59d29c3bfcbe02071157249405d162ca72331dd2146deccef4ea04633e4f675 to cache now 
+
+Showing logs for build [32mjenkinsx01-spring-boot-applicat-8lmrv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mjenkinsx01-spring-boot-applicat-8lmrv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/spring-boot-application-example to an unshallow repository
+Generating change log from git ref b2c33256b0fa01f2fb11bc44d87091ae72f8ac0d => 6b9728619eaf8fc0f539db2cd88e6e45a90260de
+Associating user jenkins-x-bot in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login jenkins-x-bot-0 as emails match
+Adding label jenkins.io/git-github-userid=jenkins-x-bot-0 to user jenkins-x-bot in users.jenkins.io
+Associating user jenkins-x-bot in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login jenkins-x-bot-0 as emails match
+Adding label jenkins.io/git-github-userid=jenkins-x-bot-0 to user jenkins-x-bot in users.jenkins.io
+Finding issues in commit messages using git format
+Associating user jenkins-x-bot in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login jenkins-x-bot-0 as emails match
+Adding label jenkins.io/git-github-userid=jenkins-x-bot-0 to user jenkins-x-bot in users.jenkins.io
+Associating user jenkins-x-bot in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login jenkins-x-bot-0 as emails match
+Adding label jenkins.io/git-github-userid=jenkins-x-bot-0 to user jenkins-x-bot in users.jenkins.io
+Associating user jenkins-x-bot in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login jenkins-x-bot-0 as emails match
+Adding label jenkins.io/git-github-userid=jenkins-x-bot-0 to user jenkins-x-bot in users.jenkins.io
+Associating user jenkins-x-bot in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login jenkins-x-bot-0 as emails match
+Adding label jenkins.io/git-github-userid=jenkins-x-bot-0 to user jenkins-x-bot in users.jenkins.io
+Associating user alex in users.jenkins.io with email amanrique86@gmail.com to git GitProvider user with login alex-0 as emails match
+Adding label jenkins.io/git-github-userid=alex-0 to user alex in users.jenkins.io
+Associating user alex in users.jenkins.io with email amanrique86@gmail.com to git GitProvider user with login alex-manrique as emails match
+Adding label jenkins.io/git-github-userid=alex-manrique to user alex in users.jenkins.io
+Associating user alex in users.jenkins.io with email amanrique86@gmail.com to git GitProvider user with login alex-manrique as emails match
+Adding label jenkins.io/git-github-userid=alex-manrique to user alex in users.jenkins.io
+Associating user github in users.jenkins.io with email noreply@github.com to git GitProvider user with login github-0 as emails match
+Adding label jenkins.io/git-github-userid=github-0 to user github in users.jenkins.io
+WARNING: No release found for JenkinsX01/spring-boot-application-example and tag v0.0.1 so creating a new release
+Updated the release information at https://github.com/JenkinsX01/spring-boot-application-example/releases/tag/v0.0.1
+generated: /workspace/source/charts/spring-boot-application-example/templates/release.yaml
+Created Release spring-boot-application-example-0-0-1 resource in namespace **
+Updating PipelineActivity jenkinsx01-spring-boot-application-example-master-1 with version 0.0.1
+Updated PipelineActivities jenkinsx01-spring-boot-application-example-master-1 with release notes URL: https://github.com/JenkinsX01/spring-boot-application-example/releases/tag/v0.0.1
+
+Showing logs for build [32mjenkinsx01-spring-boot-applicat-8lmrv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file spring-boot-application-example-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mjenkinsx01-spring-boot-applicat-8lmrv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app spring-boot-application-example version 0.0.1 to namespace **-staging
+Created Pull Request: https://github.com/JenkinsX01/environment-**akscluster-staging/pull/10
+Added label updatebot to Pull Request https://github.com/JenkinsX01/environment-**akscluster-staging/pull/10
+got git provider status pending from PR https://github.com/JenkinsX01/environment-**akscluster-staging/pull/10
+got git provider status pending from PR https://github.com/JenkinsX01/environment-**akscluster-staging/pull/10
+got git provider status pending from PR https://github.com/JenkinsX01/environment-**akscluster-staging/pull/10
+got git provider status pending from PR https://github.com/JenkinsX01/environment-**akscluster-staging/pull/10
+Pull Request https://github.com/JenkinsX01/environment-**akscluster-staging/pull/10 is merged at sha 7a336470e667788155e5b1c4d6591ceb503122d0
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names spring-boot-application-example, **-spring-boot-application-example, **-staging-spring-boot-application-example
